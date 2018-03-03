@@ -1,0 +1,10 @@
+dist: trusty
+language: ruby
+before_install:
+- bundle install
+rvm:
+- 2.4.3
+- 2.5.0
+scripts:
+- rake lint
+- rake test
