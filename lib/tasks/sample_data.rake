@@ -14,10 +14,10 @@ namespace :db do
                    email: email,
                    password: password)
 
-      users = User.all(limit: 6)
+      user = User.find_by(email: 'example@railstutorial.org')
       50.times do
         content = Faker::Lorem.sentence(5)
-        users.each { |user| user.microposts.create!(content: content) }
+        user.microposts.create!(content: content)
       end
     end
   end
