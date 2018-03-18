@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 SampleApp::Application.routes.draw do
-  get 'users/show'
-  devise_for :users, controllers: {
-    registrations: 'registrations'
+  devise_for :users, :controllers => {
+    :registrations => "registrations"
   }
-  resources :users, only: %i[show index destroy]
+  resources :users, only: [:show, :index, :destroy]
+  resources :microposts, only: [:create, :destroy]
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
