@@ -13,9 +13,9 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
-  #  def index
-  #    @users = User.paginate(page: params[:page])
-  #  end
+  def index
+    @users = User.paginate(page: params[:page])
+  end
 
   private
 

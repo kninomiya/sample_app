@@ -2,10 +2,10 @@
   <div class="row">
     <aside class="col-md-4">
       <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/micropost_form' %>
+       <%= render 'shared/user_info' %>
+        </section>
+        <section>
+       <%= render 'shared/micropost_form' %>
       </section>
     </aside>
   </div>
@@ -19,9 +19,8 @@
     sample application.
     </h2>
 
-    <%= link_to "Sign up now!", new_user_registration_path,
-                                class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+  <%= link_to image_tag('rails.png', alt: "Rails"), 'https://cdn-img.easyicon.net/png/5404/540426.gif' %>
 <% end %>
