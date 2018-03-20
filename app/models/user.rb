@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def unfollow!(other_user)
-    relationships.create!(followed_id: other_user.id)
+    relationships.find_by(followed_id: other_user.id).destroy
   end
 
   has_many :reverse_relationships, foreign_key: "followed_id",
