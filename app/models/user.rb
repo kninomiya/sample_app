@@ -10,7 +10,8 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
 
   def feed
-    Micropost.where('user_id = ?', id)
+   #Micropost.where('user_id = ?', id)
+    Micropost.from_users_followed_by(self)
   end
 
   has_many :microposts, dependent: :destroy
