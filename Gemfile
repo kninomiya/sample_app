@@ -13,6 +13,8 @@ gem 'jquery-rails'
 
 gem 'faker'
 
+gem 'paperclip'
+
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
